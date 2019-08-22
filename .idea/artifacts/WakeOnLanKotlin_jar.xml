@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WakeOnLanKotlin:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WakeOnLanKotlin_jar</output-path>
+    <root id="archive" name="WakeOnLanKotlin.jar">
+      <element id="module-output" name="WakeOnLanKotlin" />
+      <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-reflect.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-test.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk8.jar" path-in-jar="/" />
+      <element id="library" level="project" name="java" />
+    </root>
+  </artifact>
+</component>
