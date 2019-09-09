@@ -55,6 +55,22 @@ public class RemotePC {
         }
     }
 
+    void synthXOff(RemotePC pc){
+        if (!this.getGebruikersnaam().isEmpty()) {
+            String command = "SC \\\\" + this.getNetwerknaam() + " Stop SynthesisVR" ;
+            CommandThread shutdownThread = new CommandThread(command, pc);
+            shutdownThread.run();
+        }
+    }
+
+    void synthXOn(RemotePC pc){
+        if (!this.getGebruikersnaam().isEmpty()) {
+            String command = "SC \\\\" + this.getNetwerknaam() + " Start SynthesisVR" ;
+            CommandThread shutdownThread = new CommandThread(command, pc);
+            shutdownThread.run();
+        }
+    }
+
     void turnOn(String ipStr, String macStr){
         final int PORT = 9;
         try {

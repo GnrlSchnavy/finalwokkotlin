@@ -1,14 +1,11 @@
 import java.awt.Color
-import java.awt.Component
 import java.awt.event.FocusEvent
 import java.awt.event.FocusListener
 import java.io.*
 import java.lang.Integer.parseInt
 import java.util.*
-import java.util.Timer
 import java.util.function.Consumer
 import javax.swing.*
-import javax.swing.JPanel
 import javax.swing.JScrollPane
 
 
@@ -64,6 +61,9 @@ object Main {
         val turnAllOffButton = JButton("Zet alles uit")
         val turnxOffButton = JButton("Zet x uit")
         val setLogFieldButton = JButton("set textField")
+        val turnSynthesisOff = JButton("zet synth uit")
+        val turnSynthesisOn = JButton("zet synth aan")
+
 
         val logTextField = JTextArea("",5,20)
         val scrollPane = JScrollPane(logTextField)
@@ -92,6 +92,10 @@ object Main {
         textField.setBounds(400, 10, 350, 40)
         logTextField.setBounds(400, 70, 350, 120)
         setLogFieldButton.setBounds(400, 190, 350, 35)
+        turnSynthesisOn.setBounds(10, 60, 140, 40)
+        turnSynthesisOff.setBounds(200, 60, 140, 40)
+
+
 
 
         allOnButton.setBounds(10, 10, 140, 40)
@@ -108,6 +112,8 @@ object Main {
         f.add(setLogFieldButton)
         f.add(logTextField)
         f.add(scrollPane)
+        f.add(turnSynthesisOff)
+        f.add(turnSynthesisOn)
 
         f.add(textField)
         f.setSize(800, 300)
@@ -120,9 +126,39 @@ object Main {
         allOnButton.addActionListener { remotePCs.forEach { it.turnOn(prop.getProperty("subnetmask"), it.macadres) }}
         turnAllOffButton.addActionListener { remotePCs.forEach { it.turnOff(it) } }
         turnxOffButton.addActionListener { turnOfXPCs(saveTextField!!) }
+        turnSynthesisOff.addActionListener{ turnXSynthesisOff(saveTextField!!) }
+        turnSynthesisOn.addActionListener{ turnXSynthesisOn(saveTextField!!) }
 //        setLogFieldButton.addActionListener { componentMap["Logfield"]!!.append("\nasdf") }
 
     }
+    private fun turnXSynthesisOff(pcArray: String) {
+        val temp = ArrayList<RemotePC>()
+        for (i in pcArray.toCharArray()) {
+            temp.add(remotePCs[parseInt(i.toString()) - 1])
+        }
+        turnXOffSynthesis(temp)
+    }
+
+    private fun turnXOffSynthesis(temp: ArrayList<RemotePC>) {
+        for (pc in temp) {
+            pc.synthXOff(pc)
+        }
+    }
+
+    private fun turnXSynthesisOn(pcArray: String) {
+        val temp = ArrayList<RemotePC>()
+        for (i in pcArray.toCharArray()) {
+            temp.add(remotePCs[parseInt(i.toString()) - 1])
+        }
+        turnXOnSynthesis(temp)
+    }
+
+    private fun turnXOnSynthesis(temp: ArrayList<RemotePC>) {
+        for (pc in temp) {
+            pc.synthXOn(pc)
+        }
+    }
+
 
     @Throws(IOException::class)
     private fun turnofAllpcs(temp: ArrayList<RemotePC>) {
@@ -143,7 +179,6 @@ object Main {
 
     private fun turnOnAllPCs(temp: ArrayList<RemotePC>) {
         for (pc in temp) {
-
             pc.turnOn(prop.getProperty("subnetmask"), pc.macadres)
         }
     }
