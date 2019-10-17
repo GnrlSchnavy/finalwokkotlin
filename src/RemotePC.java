@@ -47,9 +47,25 @@ public class RemotePC {
                 '}';
     }
 
+    void turnTTON(RemotePC pc) {
+        if (!this.getGebruikersnaam().isEmpty()) {
+            String command = "c:/VR/psexec.exe -i -d -s \\\\"+ this.getNetwerknaam()+  " \"c:\\Program Files (x86)\\Tower Tag\\TowerTag.exe\" -vrmode OpenVR -poCtrlr " ;
+            CommandThread commandThread = new CommandThread(command, pc);
+            commandThread.run();
+        }
+    }
+
+    void turnTTOFF(RemotePC pc) {
+        if (!this.getGebruikersnaam().isEmpty()) {
+            String command = "c:/VR/psexec.exe -i -d -s \\\\"+ this.getNetwerknaam() + " TASKKILL /F /IM TowerTag.exe /T" ;
+            CommandThread commandThread = new CommandThread(command, pc);
+            commandThread.run();
+        }
+    }
+
     void turnOff(RemotePC pc)  {
         if (!this.getGebruikersnaam().isEmpty()) {
-            String command = "c:/VR/psshutdown.exe \\\\"+ this.getNetwerknaam()+" -u "+ this.gebruikersnaam + " -p " +  this.wachtwoord + " -s -f -t 1  " ;
+            String command = "c:/VR/psshutdown.exe  \\\\"+ this.getNetwerknaam()+" -u "+ this.gebruikersnaam + " -p " +  this.wachtwoord + " -s -f -t 1  " ;
             CommandThread shutdownThread = new CommandThread(command, pc);
             shutdownThread.run();
         }

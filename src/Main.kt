@@ -63,6 +63,8 @@ object Main {
         val setLogFieldButton = JButton("set textField")
         val turnSynthesisOff = JButton("zet synth uit")
         val turnSynthesisOn = JButton("zet synth aan")
+        val stopTT = JButton("zet TT uit")
+        val startTT = JButton("zet TT aan")
 
 
         val logTextField = JTextArea("",5,20)
@@ -94,10 +96,8 @@ object Main {
         setLogFieldButton.setBounds(400, 190, 350, 35)
         turnSynthesisOn.setBounds(10, 60, 140, 40)
         turnSynthesisOff.setBounds(200, 60, 140, 40)
-
-
-
-
+        startTT.setBounds(10, 160, 140, 40)
+        stopTT.setBounds(200, 160, 140, 40)
         allOnButton.setBounds(10, 10, 140, 40)
         turnOnXButton.setBounds(200, 10, 140, 40)
         turnAllOffButton.setBounds(10, 110, 140, 40)
@@ -114,6 +114,8 @@ object Main {
         f.add(scrollPane)
         f.add(turnSynthesisOff)
         f.add(turnSynthesisOn)
+        f.add(startTT)
+        f.add(stopTT)
 
         f.add(textField)
         f.setSize(800, 300)
@@ -125,6 +127,8 @@ object Main {
         turnOnXButton.addActionListener { turnOnxPCs(saveTextField!!) }
         allOnButton.addActionListener { remotePCs.forEach { it.turnOn(prop.getProperty("subnetmask"), it.macadres) }}
         turnAllOffButton.addActionListener { remotePCs.forEach { it.turnOff(it) } }
+        startTT.addActionListener { remotePCs.forEach { it.turnTTON(it) } }
+        stopTT.addActionListener { remotePCs.forEach { it.turnTTOFF(it) } }
         turnxOffButton.addActionListener { turnOfXPCs(saveTextField!!) }
         turnSynthesisOff.addActionListener{ turnXSynthesisOff(saveTextField!!) }
         turnSynthesisOn.addActionListener{ turnXSynthesisOn(saveTextField!!) }
@@ -176,6 +180,8 @@ object Main {
         }
         turnofAllpcs(temp)
     }
+
+
 
     private fun turnOnAllPCs(temp: ArrayList<RemotePC>) {
         for (pc in temp) {
