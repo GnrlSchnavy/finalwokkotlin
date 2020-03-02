@@ -1,0 +1,9 @@
+out/
+out/*
+out/**
+out
+.idea
+.idea/
+.idea/*
+.idea/**
+workspace.xml

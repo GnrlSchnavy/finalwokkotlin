@@ -182,8 +182,6 @@ public class RemotePC {
 
         }
 
-
-
         @Override
         public void run() {
             try {

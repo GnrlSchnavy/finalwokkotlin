@@ -30,13 +30,13 @@ object Main {
         val fileName = "c:/VR/application.properties"
         val inputStream = FileInputStream(fileName)
         prop.load(inputStream)
-        for (i in 0..5) {
+        for (i in 0..9) {
             remotePCs.add(buildRemotePCs(i + 1))
         }
     }
 
     private fun buildRemotePCs(i: Int): RemotePC {
-//        logToConsole("Adding pc$i")
+        print("Adding pc$i")
         val pcNumber = "pc$i"
         return RemotePC(
             prop.getProperty("$pcNumber.gebruikersnaam"),
@@ -65,6 +65,7 @@ object Main {
         val turnSynthesisOn = JButton("zet synth aan")
         val stopTT = JButton("zet TT uit")
         val startTT = JButton("zet TT aan")
+
 
 
         val logTextField = JTextArea("",5,20)
@@ -118,7 +119,7 @@ object Main {
         f.add(stopTT)
 
         f.add(textField)
-        f.setSize(800, 300)
+        f.setSize(1800, 600)
         f.layout = null
         f.isVisible = true
         f.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
@@ -163,25 +164,27 @@ object Main {
         }
     }
 
-
     @Throws(IOException::class)
     private fun turnofAllpcs(temp: ArrayList<RemotePC>) {
         temp.forEach { pc -> pc.turnOff(pc) }
     }
+
+    //1,2,3,11
 
     @Throws(IOException::class)
     private fun turnOfXPCs(pcArray: String) {
         if (pcArray.isEmpty()) {
             return
         }
-        val temp = ArrayList<RemotePC>()
-        for (i in pcArray.toCharArray()) {
-            temp.add(remotePCs[parseInt(i.toString()) - 1])
+         val temp = ArrayList<RemotePC>()
+
+        pcArray.toCharArray()
+
+        for (i in 1..pcArray.toCharArray().size) {
+            temp.add(remotePCs[parseInt(i.toString())])
         }
         turnofAllpcs(temp)
     }
-
-
 
     private fun turnOnAllPCs(temp: ArrayList<RemotePC>) {
         for (pc in temp) {

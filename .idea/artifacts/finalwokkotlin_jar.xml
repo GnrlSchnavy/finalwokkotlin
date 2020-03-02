@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="finalwokkotlin:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/finalwokkotlin_jar</output-path>
+    <root id="archive" name="finalwokkotlin.jar">
+      <element id="module-output" name="finalwokkotlin" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kotlin-stdlib.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kotlin-reflect.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kotlin-test.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

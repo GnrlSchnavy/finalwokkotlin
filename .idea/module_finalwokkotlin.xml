@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_finalwokkotlin" default="compile.module.finalwokkotlin">
+  <dirname property="module.finalwokkotlin.basedir" file="${ant.file.module_finalwokkotlin}"/>
+  
+  <property name="module.jdk.home.finalwokkotlin" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.finalwokkotlin" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.finalwokkotlin" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.finalwokkotlin" value="-encoding UTF-8 -source 11 -target 11 ${compiler.args}"/>
+  
+  <property name="finalwokkotlin.output.dir" value="${module.finalwokkotlin.basedir}/../out/production/finalwokkotlin"/>
+  <property name="finalwokkotlin.testoutput.dir" value="${module.finalwokkotlin.basedir}/../out/test/finalwokkotlin"/>
+  
+  <path id="finalwokkotlin.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="finalwokkotlin.module.production.classpath">
+    <path refid="${module.jdk.classpath.finalwokkotlin}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+  </path>
+  
+  <path id="finalwokkotlin.runtime.production.module.classpath">
+    <pathelement location="${finalwokkotlin.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+  </path>
+  
+  <path id="finalwokkotlin.module.classpath">
+    <path refid="${module.jdk.classpath.finalwokkotlin}"/>
+    <pathelement location="${finalwokkotlin.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+  </path>
+  
+  <path id="finalwokkotlin.runtime.module.classpath">
+    <pathelement location="${finalwokkotlin.testoutput.dir}"/>
+    <pathelement location="${finalwokkotlin.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.finalwokkotlin">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.finalwokkotlin">
+    <patternset refid="excluded.from.module.finalwokkotlin"/>
+  </patternset>
+  
+  <path id="finalwokkotlin.module.sourcepath">
+    <dirset dir="${module.finalwokkotlin.basedir}/../../finalwokkotlin">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.finalwokkotlin" depends="compile.module.finalwokkotlin.production,compile.module.finalwokkotlin.tests" description="Compile module finalwokkotlin"/>
+  
+  <target name="compile.module.finalwokkotlin.production" depends="register.custom.compilers" description="Compile module finalwokkotlin; production classes">
+    <mkdir dir="${finalwokkotlin.output.dir}"/>
+    <javac2 destdir="${finalwokkotlin.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.finalwokkotlin}/javac">
+      <compilerarg line="${compiler.args.finalwokkotlin}"/>
+      <bootclasspath refid="finalwokkotlin.module.bootclasspath"/>
+      <classpath refid="finalwokkotlin.module.production.classpath"/>
+      <src refid="finalwokkotlin.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.finalwokkotlin"/>
+    </javac2>
+    
+    <copy todir="${finalwokkotlin.output.dir}">
+      <fileset dir="${module.finalwokkotlin.basedir}/../src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.finalwokkotlin.tests" depends="register.custom.compilers,compile.module.finalwokkotlin.production" description="compile module finalwokkotlin; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.finalwokkotlin" description="cleanup module">
+    <delete dir="${finalwokkotlin.output.dir}"/>
+    <delete dir="${finalwokkotlin.testoutput.dir}"/>
+  </target>
+</project>

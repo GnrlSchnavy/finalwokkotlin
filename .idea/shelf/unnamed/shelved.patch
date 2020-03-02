@@ -1,0 +1,451 @@
+Index: src/MANIFEST.MF
+===================================================================
+--- src/MANIFEST.MF	(revision f9ef1b49bedaf018750d7333575f893c3fb72a46)
++++ src/MANIFEST.MF	(revision f9ef1b49bedaf018750d7333575f893c3fb72a46)
+@@ -1,3 +0,0 @@
+-Manifest-Version: 1.0
+-Main-Class: Main
+-
+Index: src/pages/Home.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/pages/Home.java	(date 1578237102394)
++++ src/pages/Home.java	(date 1578237102394)
+@@ -0,0 +1,34 @@
++package pages;
++
++import javax.swing.*;
++
++public class Home extends JFrame {
++    private JPanel rootPanel;
++    private JButton field2Button;
++    private JButton field4Button;
++    private JButton field8Button;
++    private JButton field7Button;
++    private JButton field3Button;
++    private JButton field1Button;
++    private JButton race1Button;
++    private JButton race3Button;
++    private JButton race4Button;
++    private JButton race2Button;
++    private JButton field5Button;
++    private JButton field6Button;
++    private JPanel racePanel;
++    private JPanel leftFieldPanel;
++    private JPanel rightFieldPanel;
++    private JButton allRaceOnButton;
++    private JButton allRaceOffButton;
++    private JButton allFieldsOfButton;
++    private JButton allFieldsOffButton;
++
++    public Home(){
++        add(rootPanel);
++        setTitle("Home");
++        setSize(400,400);
++
++        field1Button.setBackground();
++    }
++}
+Index: src/pages/Home.form
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/pages/Home.form	(date 1578232987823)
++++ src/pages/Home.form	(date 1578232987823)
+@@ -0,0 +1,255 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="pages.Home">
++  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="9" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
++    <margin top="0" left="0" bottom="0" right="0"/>
++    <constraints>
++      <xy x="21" y="20" width="1077" height="654"/>
++    </constraints>
++    <properties/>
++    <border type="none"/>
++    <children>
++      <hspacer id="cfc34">
++        <constraints>
++          <grid row="8" column="1" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </hspacer>
++      <hspacer id="5ebb1">
++        <constraints>
++          <grid row="8" column="4" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </hspacer>
++      <hspacer id="45aee">
++        <constraints>
++          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </hspacer>
++      <hspacer id="9f2ac">
++        <constraints>
++          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </hspacer>
++      <grid id="2fa5f" binding="racePanel" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
++        <margin top="0" left="0" bottom="0" right="0"/>
++        <constraints>
++          <grid row="1" column="2" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
++        </constraints>
++        <properties/>
++        <border type="none"/>
++        <children>
++          <component id="e2d90" class="javax.swing.JButton" binding="race1Button">
++            <constraints>
++              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties>
++              <text value="Race 1"/>
++            </properties>
++          </component>
++          <component id="f11c" class="javax.swing.JButton" binding="race3Button">
++            <constraints>
++              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties>
++              <text value="Race 3"/>
++            </properties>
++          </component>
++          <component id="87d61" class="javax.swing.JButton" binding="race4Button">
++            <constraints>
++              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties>
++              <text value="Race 4"/>
++            </properties>
++          </component>
++          <component id="85f" class="javax.swing.JButton" binding="race2Button">
++            <constraints>
++              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties>
++              <text value="Race 2"/>
++            </properties>
++          </component>
++          <component id="4f8a2" class="javax.swing.JButton" binding="allRaceOnButton">
++            <constraints>
++              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties>
++              <text value="Alles aan"/>
++            </properties>
++          </component>
++          <component id="f7d2e" class="javax.swing.JButton" binding="allRaceOffButton">
++            <constraints>
++              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties>
++              <text value="Alles uit"/>
++            </properties>
++          </component>
++        </children>
++      </grid>
++      <vspacer id="c9f30">
++        <constraints>
++          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </vspacer>
++      <grid id="73942" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
++        <margin top="0" left="0" bottom="0" right="0"/>
++        <constraints>
++          <grid row="1" column="4" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
++        </constraints>
++        <properties/>
++        <border type="none"/>
++        <children/>
++      </grid>
++      <vspacer id="26b48">
++        <constraints>
++          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </vspacer>
++      <grid id="baee" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
++        <margin top="0" left="0" bottom="0" right="0"/>
++        <constraints>
++          <grid row="4" column="2" row-span="4" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
++        </constraints>
++        <properties/>
++        <border type="none"/>
++        <children>
++          <grid id="88307" binding="leftFieldPanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
++            <margin top="0" left="0" bottom="0" right="0"/>
++            <constraints>
++              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties/>
++            <border type="none"/>
++            <children>
++              <component id="292a4" class="javax.swing.JButton" binding="field5Button">
++                <constraints>
++                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Field 5"/>
++                </properties>
++              </component>
++              <component id="86e78" class="javax.swing.JButton" binding="field3Button">
++                <constraints>
++                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Field 3"/>
++                </properties>
++              </component>
++              <component id="3a1d4" class="javax.swing.JButton" binding="field1Button">
++                <constraints>
++                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Field 1"/>
++                </properties>
++              </component>
++              <component id="72c6a" class="javax.swing.JButton" binding="field7Button">
++                <constraints>
++                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Field 7"/>
++                </properties>
++              </component>
++            </children>
++          </grid>
++          <grid id="20930" binding="rightFieldPanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
++            <margin top="0" left="0" bottom="0" right="0"/>
++            <constraints>
++              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties/>
++            <border type="none"/>
++            <children>
++              <component id="d9d17" class="javax.swing.JButton" binding="field2Button">
++                <constraints>
++                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Field 2"/>
++                </properties>
++              </component>
++              <component id="38554" class="javax.swing.JButton" binding="field4Button">
++                <constraints>
++                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Field 4"/>
++                </properties>
++              </component>
++              <component id="106ee" class="javax.swing.JButton" binding="field6Button">
++                <constraints>
++                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Field 6"/>
++                </properties>
++              </component>
++              <component id="df248" class="javax.swing.JButton" binding="field8Button">
++                <constraints>
++                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Field 8"/>
++                </properties>
++              </component>
++            </children>
++          </grid>
++          <grid id="dedd3" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
++            <margin top="0" left="0" bottom="0" right="0"/>
++            <constraints>
++              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
++            </constraints>
++            <properties/>
++            <border type="none"/>
++            <children>
++              <component id="73929" class="javax.swing.JButton" binding="allFieldsOfButton">
++                <constraints>
++                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="4" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Alles uit"/>
++                </properties>
++              </component>
++              <component id="4cff0" class="javax.swing.JButton" binding="allFieldsOffButton">
++                <constraints>
++                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
++                </constraints>
++                <properties>
++                  <text value="Alles aan"/>
++                </properties>
++              </component>
++            </children>
++          </grid>
++          <vspacer id="7df41">
++            <constraints>
++              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
++            </constraints>
++          </vspacer>
++          <hspacer id="bca35">
++            <constraints>
++              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++            </constraints>
++          </hspacer>
++        </children>
++      </grid>
++      <vspacer id="8199b">
++        <constraints>
++          <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </vspacer>
++      <hspacer id="c5d2c">
++        <constraints>
++          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </hspacer>
++      <hspacer id="f9e39">
++        <constraints>
++          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
++        </constraints>
++      </hspacer>
++    </children>
++  </grid>
++</form>
+Index: src/AppMain.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/AppMain.kt	(date 1578237505350)
++++ src/AppMain.kt	(date 1578237505350)
+@@ -0,0 +1,35 @@
++import pages.Home
++import java.util.*
++import javax.swing.JFrame
++
++
++private val prop = Properties()
++
++fun main() {
++
++    val homePage = Home()
++    homePage.isVisible = true
++    homePage.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
++
++    val timer = Timer()
++        val task = object: TimerTask() {
++        var timesRan = 0
++
++        override fun run() = println("timer passed ${++timesRan} time(s)")
++    }
++
++
++    timer.schedule(task, 0, 1000)
++
++
++}
++
++
++
++
++
++
++
++
++
++
+Index: src/RemotePC.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.io.File;\r\nimport java.io.IOException;\r\nimport java.net.DatagramPacket;\r\nimport java.net.DatagramSocket;\r\nimport java.net.InetAddress;\r\nimport java.util.concurrent.Executors;\r\n\r\nimport static java.lang.Integer.parseInt;\r\n\r\npublic class RemotePC {\r\n    private String netwerknaam;\r\n    private String gebruikersnaam;\r\n    private String wachtwoord;\r\n    private String macadres;\r\n    private Enum status;\r\n\r\n    RemotePC(String gebruikersnaam, String netwerknaam, String wachtwoord, String macadres){\r\n        this.gebruikersnaam = gebruikersnaam;\r\n        this.netwerknaam = netwerknaam;\r\n        this.wachtwoord = wachtwoord;\r\n        this.macadres = macadres;\r\n    }\r\n\r\n    private String getNetwerknaam() {\r\n        return netwerknaam;\r\n    }\r\n\r\n    private String getGebruikersnaam() {\r\n        return gebruikersnaam;\r\n    }\r\n\r\n    private String getWachtwoord() {\r\n        return wachtwoord;\r\n    }\r\n\r\n    String getMacadres() {\r\n        return macadres;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"RemotePC{\" +\r\n                \"netwerknaam='\" + netwerknaam + '\\'' +\r\n                \", gebruikersnaam='\" + gebruikersnaam + '\\'' +\r\n                \", wachtwoord='\" + wachtwoord + '\\'' +\r\n                \", macadres='\" + macadres + '\\'' +\r\n                '}';\r\n    }\r\n\r\n    void turnTTON(RemotePC pc) {\r\n        if (!this.getGebruikersnaam().isEmpty()) {\r\n            String command = \"c:/VR/psexec.exe -i -d -s \\\\\\\\\"+ this.getNetwerknaam()+  \" \\\"c:\\\\Program Files (x86)\\\\Tower Tag\\\\TowerTag.exe\\\" -vrmode OpenVR -poCtrlr \" ;\r\n            CommandThread commandThread = new CommandThread(command, pc);\r\n            commandThread.run();\r\n        }\r\n    }\r\n\r\n    void turnTTOFF(RemotePC pc) {\r\n        if (!this.getGebruikersnaam().isEmpty()) {\r\n            String command = \"c:/VR/psexec.exe -i -d -s \\\\\\\\\"+ this.getNetwerknaam() + \" TASKKILL /F /IM TowerTag.exe /T\" ;\r\n            CommandThread commandThread = new CommandThread(command, pc);\r\n            commandThread.run();\r\n        }\r\n    }\r\n\r\n    void turnOff(RemotePC pc)  {\r\n        if (!this.getGebruikersnaam().isEmpty()) {\r\n            String command = \"c:/VR/psshutdown.exe  \\\\\\\\\"+ this.getNetwerknaam()+\" -u \"+ this.gebruikersnaam + \" -p \" +  this.wachtwoord + \" -s -f -t 1  \" ;\r\n            CommandThread shutdownThread = new CommandThread(command, pc);\r\n            shutdownThread.run();\r\n        }\r\n    }\r\n\r\n    void synthXOff(RemotePC pc){\r\n        if (!this.getGebruikersnaam().isEmpty()) {\r\n            String command = \"SC \\\\\\\\\" + this.getNetwerknaam() + \" Stop SynthesisVR\" ;\r\n            CommandThread shutdownThread = new CommandThread(command, pc);\r\n            shutdownThread.run();\r\n        }\r\n    }\r\n\r\n    void synthXOn(RemotePC pc){\r\n        if (!this.getGebruikersnaam().isEmpty()) {\r\n            String command = \"SC \\\\\\\\\" + this.getNetwerknaam() + \" Start SynthesisVR\" ;\r\n            CommandThread shutdownThread = new CommandThread(command, pc);\r\n            shutdownThread.run();\r\n        }\r\n    }\r\n\r\n    void turnOn(String ipStr, String macStr){\r\n        final int PORT = 9;\r\n        try {\r\n            byte[] macBytes = getMacBytes(macStr);\r\n            byte[] bytes = new byte[6 + 16 * macBytes.length];\r\n            for (int i = 0; i < 6; i++) {\r\n                bytes[i] = (byte) 0xff;\r\n            }\r\n            for (int i = 6; i < bytes.length; i += macBytes.length) {\r\n                System.arraycopy(macBytes, 0, bytes, i, macBytes.length);\r\n            }\r\n\r\n            InetAddress address = InetAddress.getByName(ipStr);\r\n            DatagramPacket packet = new DatagramPacket(bytes, bytes.length, address, PORT);\r\n            DatagramSocket socket = new DatagramSocket();\r\n            socket.send(packet);\r\n            socket.close();\r\n            System.out.println(\"Wake-on-LAN packet sent.\");\r\n        }\r\n        catch (Exception e) {\r\n            System.out.println(\"Failed to send Wake-on-LAN packet:\" + e);\r\n            System.exit(1);\r\n        }\r\n    }\r\n\r\n    private static byte[] getMacBytes(String macStr) throws IllegalArgumentException {\r\n        byte[] bytes = new byte[6];\r\n        String[] hex = macStr.split(\"(\\\\:|\\\\-)\");\r\n        if (hex.length != 6) {\r\n            throw new IllegalArgumentException(\"Invalid MAC address.\");\r\n        }\r\n        try {\r\n            for (int i = 0; i < 6; i++) {\r\n                bytes[i] = (byte) parseInt(hex[i], 16);\r\n            }\r\n        }\r\n        catch (NumberFormatException e) {\r\n            throw new IllegalArgumentException(\"Invalid hex digit in MAC address.\");\r\n        }\r\n        return bytes;\r\n    }\r\n\r\n    class CommandThread implements Runnable {\r\n        String command;\r\n        RemotePC pc;\r\n        CommandThread(String command, RemotePC pc){\r\n            this.command = command;\r\n            this.pc=  pc;\r\n        }\r\n\r\n        private Boolean isOn(String pcName) throws IOException {\r\n            InetAddress pingablePC = InetAddress.getByName(pcName);\r\n            for(int i = 0; i <=2;i++){\r\n                System.out.println(\"Sending Ping Request to \" + pcName);\r\n                if(pingablePC.isReachable(100)){\r\n                    System.out.println(\"PC\" + pcName + \"is ON\");\r\n                    return true;\r\n                }\r\n            }\r\n            System.out.println(\"PC\" + pcName + \"is OFF\");\r\n            return false;\r\n        }\r\n\r\n        void sendCommand(String command) {\r\n            String netCommand = \"net use \\\\\\\\\" +\r\n                    pc.getNetwerknaam() + \" /user:\" + pc.getGebruikersnaam() +  \" \"+ pc.getWachtwoord();\r\n            ProcessBuilder netBuilder = new ProcessBuilder();\r\n            netBuilder.command(\"cmd.exe\", \"/c\", netCommand);\r\n            netBuilder.directory(new File(System.getProperty(\"user.home\")));\r\n\r\n            ProcessBuilder builder = new ProcessBuilder();\r\n            builder.command(\"cmd.exe\", \"/c\", command);\r\n            builder.directory(new File(System.getProperty(\"user.home\")));\r\n\r\n            Process netProcess = null;\r\n            Process process = null;\r\n            try {\r\n                netProcess = netBuilder.start();\r\n                process = builder.start();\r\n            } catch (IOException e) {\r\n                e.printStackTrace();\r\n            }\r\n            assert netProcess != null;\r\n            assert process != null;\r\n            Main.StreamGobbler netstreamGobbler =\r\n                    new Main.StreamGobbler(netProcess.getInputStream(), System.out::println);\r\n            Main.StreamGobbler streamGobbler =\r\n                    new Main.StreamGobbler(process.getInputStream(), System.out::println);\r\n            System.out.println(\"Sending NETcommand  \" + netCommand);\r\n            Executors.newSingleThreadExecutor().submit(netstreamGobbler);\r\n            System.out.println(\"Sending command  \" + command);\r\n            Executors.newSingleThreadExecutor().submit(streamGobbler);\r\n\r\n        }\r\n\r\n\r\n\r\n        @Override\r\n        public void run() {\r\n            try {\r\n                if(isOn(pc.netwerknaam)){\r\n                    sendCommand(command);\r\n                }\r\n            }\r\n            catch(Exception e){\r\n                System.out.println(e.toString());\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/RemotePC.java	(revision f9ef1b49bedaf018750d7333575f893c3fb72a46)
++++ src/RemotePC.java	(date 1578220013682)
+@@ -182,8 +182,6 @@
+ 
+         }
+ 
+-
+-
+         @Override
+         public void run() {
+             try {
+Index: src/Main.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.awt.Color\r\nimport java.awt.event.FocusEvent\r\nimport java.awt.event.FocusListener\r\nimport java.io.*\r\nimport java.lang.Integer.parseInt\r\nimport java.util.*\r\nimport java.util.function.Consumer\r\nimport javax.swing.*\r\nimport javax.swing.JScrollPane\r\n\r\n\r\n\r\nobject Main {\r\n\r\n    private val prop = Properties()\r\n    private val remotePCs = ArrayList<RemotePC>()\r\n    private var saveTextField: String? = null\r\n    private val f = JFrame(\"Start/shutdown pc's\")\r\n    private val componentMap = mutableMapOf<String, JTextArea>()\r\n\r\n    @Throws(IOException::class)\r\n    @JvmStatic\r\n    fun main(args: Array<String>) {\r\n        createWindow()\r\n        loadProperties()\r\n    }\r\n\r\n    @Throws(IOException::class)\r\n    private fun loadProperties() {\r\n        val fileName = \"c:/VR/application.properties\"\r\n        val inputStream = FileInputStream(fileName)\r\n        prop.load(inputStream)\r\n        for (i in 0..5) {\r\n            remotePCs.add(buildRemotePCs(i + 1))\r\n        }\r\n    }\r\n\r\n    private fun buildRemotePCs(i: Int): RemotePC {\r\n//        logToConsole(\"Adding pc$i\")\r\n        val pcNumber = \"pc$i\"\r\n        return RemotePC(\r\n            prop.getProperty(\"$pcNumber.gebruikersnaam\"),\r\n            prop.getProperty(\"$pcNumber.netwerknaam\"),\r\n            prop.getProperty(\"$pcNumber.wachtwoord\"),\r\n            prop.getProperty(\"$pcNumber.macadres\")\r\n        )\r\n    }\r\n\r\n    internal class StreamGobbler(private val inputStream: InputStream, private val consumer: Consumer<String>) :\r\n        Runnable {\r\n        override fun run() {\r\n            BufferedReader(InputStreamReader(inputStream)).lines()\r\n                .forEach(consumer)\r\n        }\r\n    }\r\n\r\n    private fun createWindow() {\r\n        //submit button\r\n        val allOnButton = JButton(\"Alles aan\")\r\n        val turnOnXButton = JButton(\"Zet x aan\")\r\n        val turnAllOffButton = JButton(\"Zet alles uit\")\r\n        val turnxOffButton = JButton(\"Zet x uit\")\r\n        val setLogFieldButton = JButton(\"set textField\")\r\n        val turnSynthesisOff = JButton(\"zet synth uit\")\r\n        val turnSynthesisOn = JButton(\"zet synth aan\")\r\n        val stopTT = JButton(\"zet TT uit\")\r\n        val startTT = JButton(\"zet TT aan\")\r\n\r\n\r\n        val logTextField = JTextArea(\"\",5,20)\r\n        val scrollPane = JScrollPane(logTextField)\r\n        componentMap[\"Logfield\"] = logTextField\r\n        f.add(scrollPane)\r\n\r\n        val textField = JTextField(\"PC nummers simpel achter elkaar. BV: '124'\")\r\n\r\n        textField.foreground = Color.GRAY\r\n        textField.addFocusListener(object : FocusListener {\r\n            override fun focusGained(e: FocusEvent) {\r\n                textField.text = \"\"\r\n                textField.foreground = Color.BLACK\r\n            }\r\n\r\n            override fun focusLost(e: FocusEvent) {\r\n                textField.foreground = Color.GRAY\r\n                saveTextField = textField.text\r\n                textField.text = \"PC nummers achter elkaar: bijvoorbeeld :'143'\"\r\n\r\n            }\r\n        })\r\n\r\n        scrollPane.setBounds(400, 70, 350, 120)\r\n\r\n        textField.setBounds(400, 10, 350, 40)\r\n        logTextField.setBounds(400, 70, 350, 120)\r\n        setLogFieldButton.setBounds(400, 190, 350, 35)\r\n        turnSynthesisOn.setBounds(10, 60, 140, 40)\r\n        turnSynthesisOff.setBounds(200, 60, 140, 40)\r\n        startTT.setBounds(10, 160, 140, 40)\r\n        stopTT.setBounds(200, 160, 140, 40)\r\n        allOnButton.setBounds(10, 10, 140, 40)\r\n        turnOnXButton.setBounds(200, 10, 140, 40)\r\n        turnAllOffButton.setBounds(10, 110, 140, 40)\r\n        turnxOffButton.setBounds(200, 110, 140, 40)\r\n\r\n\r\n        //add to frame\r\n        f.add(allOnButton)\r\n        f.add(turnOnXButton)\r\n        f.add(turnAllOffButton)\r\n        f.add(turnxOffButton)\r\n        f.add(setLogFieldButton)\r\n        f.add(logTextField)\r\n        f.add(scrollPane)\r\n        f.add(turnSynthesisOff)\r\n        f.add(turnSynthesisOn)\r\n        f.add(startTT)\r\n        f.add(stopTT)\r\n\r\n        f.add(textField)\r\n        f.setSize(800, 300)\r\n        f.layout = null\r\n        f.isVisible = true\r\n        f.defaultCloseOperation = JFrame.EXIT_ON_CLOSE\r\n\r\n        //action listener\r\n        turnOnXButton.addActionListener { turnOnxPCs(saveTextField!!) }\r\n        allOnButton.addActionListener { remotePCs.forEach { it.turnOn(prop.getProperty(\"subnetmask\"), it.macadres) }}\r\n        turnAllOffButton.addActionListener { remotePCs.forEach { it.turnOff(it) } }\r\n        startTT.addActionListener { remotePCs.forEach { it.turnTTON(it) } }\r\n        stopTT.addActionListener { remotePCs.forEach { it.turnTTOFF(it) } }\r\n        turnxOffButton.addActionListener { turnOfXPCs(saveTextField!!) }\r\n        turnSynthesisOff.addActionListener{ turnXSynthesisOff(saveTextField!!) }\r\n        turnSynthesisOn.addActionListener{ turnXSynthesisOn(saveTextField!!) }\r\n//        setLogFieldButton.addActionListener { componentMap[\"Logfield\"]!!.append(\"\\nasdf\") }\r\n\r\n    }\r\n    private fun turnXSynthesisOff(pcArray: String) {\r\n        val temp = ArrayList<RemotePC>()\r\n        for (i in pcArray.toCharArray()) {\r\n            temp.add(remotePCs[parseInt(i.toString()) - 1])\r\n        }\r\n        turnXOffSynthesis(temp)\r\n    }\r\n\r\n    private fun turnXOffSynthesis(temp: ArrayList<RemotePC>) {\r\n        for (pc in temp) {\r\n            pc.synthXOff(pc)\r\n        }\r\n    }\r\n\r\n    private fun turnXSynthesisOn(pcArray: String) {\r\n        val temp = ArrayList<RemotePC>()\r\n        for (i in pcArray.toCharArray()) {\r\n            temp.add(remotePCs[parseInt(i.toString()) - 1])\r\n        }\r\n        turnXOnSynthesis(temp)\r\n    }\r\n\r\n    private fun turnXOnSynthesis(temp: ArrayList<RemotePC>) {\r\n        for (pc in temp) {\r\n            pc.synthXOn(pc)\r\n        }\r\n    }\r\n\r\n\r\n    @Throws(IOException::class)\r\n    private fun turnofAllpcs(temp: ArrayList<RemotePC>) {\r\n        temp.forEach { pc -> pc.turnOff(pc) }\r\n    }\r\n\r\n    @Throws(IOException::class)\r\n    private fun turnOfXPCs(pcArray: String) {\r\n        if (pcArray.isEmpty()) {\r\n            return\r\n        }\r\n        val temp = ArrayList<RemotePC>()\r\n        for (i in pcArray.toCharArray()) {\r\n            temp.add(remotePCs[parseInt(i.toString()) - 1])\r\n        }\r\n        turnofAllpcs(temp)\r\n    }\r\n\r\n\r\n\r\n    private fun turnOnAllPCs(temp: ArrayList<RemotePC>) {\r\n        for (pc in temp) {\r\n            pc.turnOn(prop.getProperty(\"subnetmask\"), pc.macadres)\r\n        }\r\n    }\r\n\r\n    private fun turnOnxPCs(pcArray: String) {\r\n        val temp = ArrayList<RemotePC>()\r\n        for (i in pcArray.toCharArray()) {\r\n            temp.add(remotePCs[parseInt(i.toString()) - 1])\r\n        }\r\n        turnOnAllPCs(temp)\r\n    }\r\n\r\n    private fun logToConsole(logText: String){\r\n        componentMap[\"Logtext\"]!!.append(logText)\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Main.kt	(revision f9ef1b49bedaf018750d7333575f893c3fb72a46)
++++ src/Main.kt	(date 1578223611106)
+@@ -30,13 +30,13 @@
+         val fileName = "c:/VR/application.properties"
+         val inputStream = FileInputStream(fileName)
+         prop.load(inputStream)
+-        for (i in 0..5) {
++        for (i in 0..9) {
+             remotePCs.add(buildRemotePCs(i + 1))
+         }
+     }
+ 
+     private fun buildRemotePCs(i: Int): RemotePC {
+-//        logToConsole("Adding pc$i")
++        print("Adding pc$i")
+         val pcNumber = "pc$i"
+         return RemotePC(
+             prop.getProperty("$pcNumber.gebruikersnaam"),
+@@ -67,6 +67,7 @@
+         val startTT = JButton("zet TT aan")
+ 
+ 
++
+         val logTextField = JTextArea("",5,20)
+         val scrollPane = JScrollPane(logTextField)
+         componentMap["Logfield"] = logTextField
+@@ -118,7 +119,7 @@
+         f.add(stopTT)
+ 
+         f.add(textField)
+-        f.setSize(800, 300)
++        f.setSize(1800, 600)
+         f.layout = null
+         f.isVisible = true
+         f.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+@@ -163,26 +164,28 @@
+         }
+     }
+ 
+-
+     @Throws(IOException::class)
+     private fun turnofAllpcs(temp: ArrayList<RemotePC>) {
+         temp.forEach { pc -> pc.turnOff(pc) }
+     }
+ 
++    //1,2,3,11
++
+     @Throws(IOException::class)
+     private fun turnOfXPCs(pcArray: String) {
+         if (pcArray.isEmpty()) {
+             return
+         }
+-        val temp = ArrayList<RemotePC>()
+-        for (i in pcArray.toCharArray()) {
+-            temp.add(remotePCs[parseInt(i.toString()) - 1])
++         val temp = ArrayList<RemotePC>()
++
++        pcArray.toCharArray()
++
++        for (i in 1..pcArray.toCharArray().size) {
++            temp.add(remotePCs[parseInt(i.toString())])
+         }
+         turnofAllpcs(temp)
+     }
+ 
+-
+-
+     private fun turnOnAllPCs(temp: ArrayList<RemotePC>) {
+         for (pc in temp) {
+             pc.turnOn(prop.getProperty("subnetmask"), pc.macadres)
