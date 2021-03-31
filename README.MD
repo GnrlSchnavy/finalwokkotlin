@@ -1,6 +1,7 @@
 This little programs is (being) created for the company VRCafeHaarlem.
 It should be used to hibernate and wake from hibernate windows pc's.
 It will also be updated with the option to start run a simple mining command on every computer.
+This program can now be used to active miners on multiple laptops that are used in/as a mining configuration.
 
 Usage
 ---
