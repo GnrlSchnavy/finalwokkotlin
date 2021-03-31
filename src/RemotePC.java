@@ -55,33 +55,9 @@ public class RemotePC {
         }
     }
 
-    void turnTTOFF(RemotePC pc) {
-        if (!this.getGebruikersnaam().isEmpty()) {
-            String command = "c:/VR/psexec.exe -i -d -s \\\\"+ this.getNetwerknaam() + " TASKKILL /F /IM TowerTag.exe /T" ;
-            CommandThread commandThread = new CommandThread(command, pc);
-            commandThread.run();
-        }
-    }
-
     void turnOff(RemotePC pc)  {
         if (!this.getGebruikersnaam().isEmpty()) {
             String command = "c:/VR/psshutdown.exe  \\\\"+ this.getNetwerknaam()+" -u "+ this.gebruikersnaam + " -p " +  this.wachtwoord + " -s -f -t 1  " ;
-            CommandThread shutdownThread = new CommandThread(command, pc);
-            shutdownThread.run();
-        }
-    }
-
-    void synthXOff(RemotePC pc){
-        if (!this.getGebruikersnaam().isEmpty()) {
-            String command = "SC \\\\" + this.getNetwerknaam() + " Stop SynthesisVR" ;
-            CommandThread shutdownThread = new CommandThread(command, pc);
-            shutdownThread.run();
-        }
-    }
-
-    void synthXOn(RemotePC pc){
-        if (!this.getGebruikersnaam().isEmpty()) {
-            String command = "SC \\\\" + this.getNetwerknaam() + " Start SynthesisVR" ;
             CommandThread shutdownThread = new CommandThread(command, pc);
             shutdownThread.run();
         }
@@ -110,6 +86,13 @@ public class RemotePC {
             System.out.println("Failed to send Wake-on-LAN packet:" + e);
             System.exit(1);
         }
+    }
+
+    void startMining(RemotePC pc){
+        String command = "c:/VR/psexec.exe \\\\" + this.netwerknaam + " -u " + this.gebruikersnaam + " -p " + this.wachtwoord + " c:/VR/Mining/PhoenixMiner.exe";
+        System.out.println(command);
+        CommandThread shutdownThread = new CommandThread(command, pc);
+        shutdownThread.run();
     }
 
     private static byte[] getMacBytes(String macStr) throws IllegalArgumentException {
