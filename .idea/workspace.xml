@@ -6,34 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16c0fca6-c52d-48eb-ab6d-de6908a15b30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/createExecutable.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/finalwokkotlin/RemotePC$CommandThread$sendCommand$netstreamGobbler$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/finalwokkotlin/RemotePC$CommandThread$sendCommand$streamGobbler$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/finalwokkotlin/RemotePC$Companion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/finalwokkotlin/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RemotePC.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/finalwokkotlin_jar/finalwokkotlin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/finalwokkotlin_jar/finalwokkotlin.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/finalwokkotlin/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/RemotePC$CommandThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/finalwokkotlin/RemotePC$CommandThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/RemotePC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/finalwokkotlin/RemotePC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/StatusChecker$RemindTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/StatusChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/finalwokkotlin/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemotePC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StatusChecker.java" beforeDir="false" />
-    </list>
+    <list default="true" id="16c0fca6-c52d-48eb-ab6d-de6908a15b30" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -246,7 +219,7 @@
       <workItem from="1578219481175" duration="3844000" />
       <workItem from="1578223731652" duration="12505000" />
       <workItem from="1617190874966" duration="5004000" />
-      <workItem from="1617197177281" duration="34000" />
+      <workItem from="1617197177281" duration="755000" />
     </task>
     <task id="LOCAL-00001" summary="Try to add start mining command">
       <created>1617191913441</created>
@@ -255,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617191913441</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Try to add start mining command">
+      <created>1617197271432</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617197271432</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
